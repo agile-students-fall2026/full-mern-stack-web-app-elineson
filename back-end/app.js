@@ -79,4 +79,17 @@ app.post('/messages/save', async (req, res) => {
 })
 
 // export the express app we created to make it available to other modules
+
+app.get('/about', (req, res) => {
+  res.json({
+    name: 'Eline Son',
+    paragraphs: [
+      'I am a senior studying Computer Science and Data Science.',
+      'I am from South Korea.',
+      'I really like cats, I have a cat named Pingping and I love cooking and baking.'
+    ],
+    imageUrl: '/elinephoto.jpg'
+  })
+})
+
 module.exports = app // CommonJS export style!
